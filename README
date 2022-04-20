@@ -1,0 +1,8 @@
+timer
+
+A basic countdown timer. Displays the remaining duration while counting down.
+
+Usage:
+  timer 25s
+  timer 11:32AM
+  timer 3h40m50s
