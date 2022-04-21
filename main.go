@@ -4,6 +4,7 @@ import (
 	"flag"
 	"fmt"
 	"log"
+	"strings"
 	"time"
 )
 
@@ -54,7 +55,9 @@ func parseDuration(s string) (time.Duration, error) {
 }
 
 func parseKitchen(s string) (time.Duration, error) {
-	targetTime, err := time.Parse(time.Kitchen, s)
+	upper := strings.ToUpper(s)
+
+	targetTime, err := time.Parse(time.Kitchen, upper)
 	if err != nil {
 		return time.Duration(0), err
 	}
