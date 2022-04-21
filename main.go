@@ -15,8 +15,10 @@ Usage:
   timer 3h40m50s
 `
 
+var Version string
+
 func main() {
-	log.SetPrefix("timer: ")
+	log.SetPrefix("timer " + Version + ": ")
 	log.SetFlags(0)
 	flag.Parse()
 	if len(flag.Args()) != 1 {
