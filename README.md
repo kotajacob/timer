@@ -6,6 +6,7 @@ A basic countdown timer. Displays the remaining duration while counting down.
 ```
 timer 25s
 timer 11:32AM
+timer 19:20
 timer 3h40m50s
 ```
 

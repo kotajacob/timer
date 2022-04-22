@@ -16,8 +16,8 @@ acceptable for DURATION.
 such as "300ms", "1.5h" or "2h45m". Valid time units are "ns", "us" (or "µs"),
 "ms", "s", "m", "h".
 
-2. A kitchen time format "3:04PM" in which the timer will complete at the next
-occurence of the specified time.
+2. A kitchen time format like "3:04PM" or "15:04". The timer will complete at
+the next occurence of the specified time.
 
 # AUTHORS
 

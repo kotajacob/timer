@@ -12,6 +12,7 @@ const usage = `
 Usage:
   timer 25s
   timer 11:32AM
+  timer 19:20
   timer 3h40m50s
 `
 
@@ -57,11 +58,12 @@ func parseDuration(s string) (time.Duration, error) {
 }
 
 func parseKitchen(s string) (time.Duration, error) {
-	upper := strings.ToUpper(s)
-
-	targetTime, err := time.Parse(time.Kitchen, upper)
+	targetTime, err := time.Parse("15:04", s)
 	if err != nil {
-		return time.Duration(0), err
+		targetTime, err = time.Parse(time.Kitchen, strings.ToUpper(s))
+		if err != nil {
+			return time.Duration(0), err
+		}
 	}
 
 	now := time.Now()
