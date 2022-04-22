@@ -33,7 +33,7 @@ install:
 
 uninstall:
 	$(RM) -f \
-		$(DESTDIR)$(PREFIX)/$(BINDIR)/timer
+		$(DESTDIR)$(PREFIX)/$(BINDIR)/timer \
 		$(DESTDIR)$(PREFIX)/$(MANDIR)/man1/timer.1
 
 .PHONY: all timer clean install uninstall
